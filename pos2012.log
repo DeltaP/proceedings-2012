@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  4 SEP 2012 16:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  4 SEP 2012 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -349,7 +349,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  2690 strings out of 493633
  34614 string characters out of 3143378
- 90058 words of memory out of 3000000
+ 90062 words of memory out of 3000000
  5892 multiletter control sequences out of 15000+200000
  75319 words of font info for 123 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
@@ -365,7 +365,7 @@ t/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2011/texmf-dist/fonts/typ
 e1/urw/symbol/usyr.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/time
 s/utmb8a.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/local/texlive/2011/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on pos2012.pdf (3 pages, 127520 bytes).
+Output written on pos2012.pdf (3 pages, 127388 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
