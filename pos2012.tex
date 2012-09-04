@@ -45,14 +45,16 @@ For a more detailed description of two lattic matching see\cite{annaMCRG}.  The 
 \end{equation}
 \end{enumerate}
 
-In practice this means that I generate three lattices sizes over a variety of $\beta$ values.  Since I used a blocking factor of two, the smallest appropriate sizes are $4^4$, $8^4$, and $16^4$.  I then block all of these lattices down to $2^4$ and, interpolating over the smaller sizes, match the blocked $16^4$ lattices to blocked $8^4$ lattices and the blocked $8^4$ lattices to blocked $4^4$ lattices.  This gives me two values of $\Delta\beta$.  To optimize the block transformation we tune a blocking parameter $\alpha$; $\alpha_{optimal}$ is the value of $\alpha$ for which the two values of $\Delta\beta$ for the $16^4\to8^4$ matching and the $8^4\to4^4$ matching are identical.  Once we have optimized the blocking, $s_b$ can be approximated as $\Delta\beta_{optimal}$.
+To accomplish this end I generate three lattices sizes over a variety of $\beta$ values.  We used a blocking factor of two and three volume sizes to do finite volume corrected two lattice matching:  $24^3x48$, $12^3x24$, $6^3x12$.  All of our volumes were blocked down to a volume of $3^3x6$ at which point we performed matching with the $24^3x48$ and $12^3x24$ as well as the $12^3x24$ and $6^3x12$.  This gives me two values of $\Delta\beta$.  To optimize the block transformation we tune a blocking parameter $\alpha$; $\alpha_{optimal}$ is the value of $\alpha$ for which the two values of $\Delta\beta$ for the $24^3x24\to3^3x6$ matching and the $12^3x24\to3^3x6$ matching are identical.  Once we have optimized the blocking, $s_b$ can be approximated as $\Delta\beta_{optimal}$.
 
-A great feature of MCRG is that it is fairly insensitive to finite volume effects since we are always comparing measurmetns on the same lattice size.  Because we are using expectation values of observables to compare actions this feature also allows us to work at small lattice sizes and still achieve good results.  Additionally because we are comparing local operators the statistical accuracy is generally good even with modest datasets.
+A great feature of MCRG is that it is fairly insensitive to finite volume effects since we are always comparing measurmetns on the same lattice size.  Because we are using expectation values of observables to compare actions this feature also allows us to work at small lattice sizes and still achieve good results.  Additionally because we are comparing local operators the statistical accuracy is generally good even with modest datasets.  Finally MCRG is a nice method for determining the step scaling function because it does not require special lattices.  The lattices used to generate this MCRG result are the same lattices that were used throughour program of study.
 
 
 \section{8 Flavor Results}
+Our results for 8 flavors shows a step scaling function that is running 
 
 \section{12 Flavor Results}
+Our resutls for 12 flavors 
 
 \section{Wilson Flow}
 
