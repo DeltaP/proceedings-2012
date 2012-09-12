@@ -1,31 +1,22 @@
 \documentclass{PoS}
 
-\title{MCRG study of 8 and 12 fundamental flavors with mixed fundamental-adjoint gauge action in strong coupling}
+% Laziness shortcuts
+\newcommand{\refcite}[1]{Ref.~\cite{#1}}
 
-\ShortTitle{MCRG study of 8 and 12 fundamental flavors with mixed fundamental-adjoint gauge action in strong coupling}
+\title{MCRG study of 8 and 12 fundamental flavors}
+\ShortTitle{MCRG study of 8 and 12 fundamental flavors}
 
-\author{Anqi Cheng\\
-        University of Colorado\\
-        E-mail: \email{chenganqi498@gmail.com}}
-
-\author{Anna Hasenfratz\\
-        University of Colorado\\
-        E-mail: \email{anna@eotvos.colorado.edu}}
-
-\author{\speaker{Gregory Petropoulos}\\
-        University of Colorado\\
-        E-mail: \email{gregory.petropoulos@colorado.edu}}
-
-\author{David Schaich\\
-        University of Colorado\\
-        E-mail: \email{daschaich@gmail.com}}
+\author{\speaker{Gregory Petropoulos}, Anqi Cheng, Anna Hasenfratz and David Schaich \\
+  Department of Physics, University of Colorado, Boulder, CO 80309 \\
+  Email: \email{gregory.petropoulos@colorado.edu}
+}
 
 \abstract{
-  I explore the behavior of the beta function of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions using Monte Carlo Renormalization Group (MCRG) techniques.  
+  We explore the behavior of the beta function of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions using Monte Carlo Renormalization Group (MCRG) techniques.
 }
 
 \FullConference{The 30th International Symposium on Lattice Field Theory\\
-                 June 24--29,  2012\\
+                 June 24--29, 2012\\
                  Cairns, Australia}
 
 \begin{document}
@@ -33,29 +24,42 @@
 \section{Introduction}
 The behavior of strongly coupled ...
 
-Our groups MCRG analysis is part of a broader study of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions.  Other characterstics of these theories that we have studied include the finite temperature phase diagram, eigenvalues, and mass spectra.  Understanding how the beta function runs is very importaint in determining basic characteristics of a theory.  Several other groups are also interested in these theories, many of whome have also calculated the step scaling function using schrodinger functional (other ways).  
+Our groups MCRG analysis is part of a broader study of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions.
+Other characteristics of these theories that we have studied include the finite temperature phase diagram, eigenvalues, and mass spectra.
+Understanding how the beta function runs is very importaint in determining basic characteristics of a theory.
+Several other groups are also interested in these theories, many of whome have also calculated the step scaling function using Schr\"odinger functional (other ways).
 
 \section{Two Lattice MCRG Matching}
-For a more detailed description of two lattic matching see \cite{annaMCRG}.  The fundamental idea of two lattice matching is to geneate pairs of couplings $(\beta, \beta^{\prime})$ such that the lattice correlation lenght obeys $\xi(\beta)=2\xi(\beta^{\prime})$.  Here we define the step scaling function, the analogue of the RG $\beta$ function, as $s_b= \lim_{n_b\to\infty}(\Delta\beta=\beta - \beta^{\prime})$.  Two blocked actions are identical if all blocked observables' expectation values are identical.  The action matching process is summarized in two steps:
+For a more detailed description of two lattic matching see \refcite{annaMCRG}.
+The fundamental idea of two lattice matching is to geneate pairs of couplings $(\beta, \beta^{\prime})$ such that the lattice correlation length obeys $\xi(\beta)=2\xi(\beta^{\prime})$.
+Here we define the step scaling function, the analogue of the RG $\beta$ function, as $s_b= \lim_{n_b\to\infty}(\Delta\beta=\beta - \beta^{\prime})$.
+Two blocked actions are identical if all blocked observables' expectation values are identical.
+The action matching process is summarized in two steps:
 
 \begin{enumerate}
-\item \emph{Matching:}  Match a given operator measured on two lattices blocked down to the same size $L_b$, where $L_b=\frac{L}{2^{n_b}}$
-\begin{equation}
-\Delta\beta(\beta;n_b,L_b)=\beta-\beta^{\prime}
-\end{equation}
-\begin{equation}
-<O(\beta;n_b,L_b)>=<O(\beta^{\prime};n_b-1,L_b)>
-\end{equation}
-\item \emph{Optimization:}  Tune the blocking parameter such that consecutive steps yield the same $\Delta\beta$
-\begin{equation}
-\Delta\beta(\beta;n_b,L_b,\alpha_{optimal})=\Delta\beta(\beta;n_b-1,L_b,\alpha_{optimal})
-\end{equation}
+  \item \emph{Matching:}  Match a given operator measured on two lattices blocked down to the same size $L_b$, where $L_b=\frac{L}{2^{n_b}}$
+  \begin{align}
+    \Delta\beta(\beta;n_b,L_b) & = \beta-\beta^{\prime}
+    \langle O(\beta;n_b,L_b)\rangle & = \langleO(\beta^{\prime};n_b-1,L_b)\rangle
+  \end{align}
+  \item \emph{Optimization:}  Tune the blocking parameter such that consecutive steps yield the same $\Delta\beta$
+  \begin{equation}
+    \Delta\beta(\beta;n_b,L_b,\alpha_{optimal})=\Delta\beta(\beta;n_b-1,L_b,\alpha_{optimal})
+  \end{equation}
 \end{enumerate}
 
-To accomplish this end I generate three lattices sizes over a variety of $\beta$ values.  We used a blocking factor of two and three volume sizes to do finite volume corrected two lattice matching:  $24^3x48$, $12^3x24$, $6^3x12$.  All of our volumes were blocked down to a volume of $3^3x6$ at which point we performed matching with the $24^3x48$ and $12^3x24$ as well as the $12^3x24$ and $6^3x12$.  This gives me two values of $\Delta\beta$.  To optimize the block transformation we tune a blocking parameter $\alpha$; $\alpha_{optimal}$ is the value of $\alpha$ for which the two values of $\Delta\beta$ for the $24^3x24\to3^3x6$ matching and the $12^3x24\to3^3x6$ matching are identical.  Once we have optimized the blocking, $s_b$ can be approximated as $\Delta\beta_{optimal}$.
+To accomplish this end I generate three lattices sizes over a variety of $\beta$ values.
+We used a blocking factor of two and three volume sizes to do finite volume corrected two lattice matching: $24^3x48$, $12^3x24$, $6^3x12$.
+All of our volumes were blocked down to a volume of $3^3x6$ at which point we performed matching with the $24^3x48$ and $12^3x24$ as well as the $12^3x24$ and $6^3x12$.
+This gives me two values of $\Delta\beta$.
+To optimize the block transformation we tune a blocking parameter $\alpha$; $\alpha_{optimal}$ is the value of $\alpha$ for which the two values of $\Delta\beta$ for the $24^3x24\to3^3x6$ matching and the $12^3x24\to3^3x6$ matching are identical.
+Once we have optimized the blocking, $s_b$ can be approximated as $\Delta\beta_{optimal}$.
 
-A great feature of MCRG is that it is fairly insensitive to finite volume effects since we are always comparing measurmetns on the same lattice size.  Because we are using expectation values of observables to compare actions this feature also allows us to work at small lattice sizes and still achieve good results.  Additionally because we are comparing local operators the statistical accuracy is generally good even with modest datasets.  Finally MCRG is a nice method for determining the step scaling function because it does not require special lattices.  The lattices used to generate this MCRG result are the same lattices that were used throughour program of study.
-
+A great feature of MCRG is that it is fairly insensitive to finite volume effects since we are always comparing measurements on the same lattice size.
+Because we are using expectation values of observables to compare actions this feature also allows us to work at small lattice sizes and still achieve good results.
+Additionally because we are comparing local operators the statistical accuracy is generally good even with modest datasets.
+Finally MCRG is a nice method for determining the step scaling function because it does not require special lattices.
+The lattices used to generate this MCRG result are the same lattices that were used throughout our program of study
 
 \section{8 Flavor Results}
 Our results for 8 flavors shows a step scaling function that is running 
@@ -70,12 +74,15 @@ Our resutls for 12 flavors
 \section{Conclusion}
 
 \section{Acknowledgments}
-This research was supported in part by an award from the Department of Energy (DOE) Office of Science Graduate Fellowship Program (DOE SCGF). The DOE SCGF Program was made possible in part by the American Recovery and Reinvestment Act of 2009.  The DOE SCGF program is administered by the Oak Ridge Institute for Science and Education for the DOE. ORISE is managed by Oak Ridge Associated Universities (ORAU) under DOE contract number DE-AC05-06OR23100.  All opinions expressed in this paper are the author's and do not necessarily reflect the policies and views of DOE, ORAU, or ORISE.
+Thank Nogradi\dots
 
-"This work utilized the Janus supercomputer, which is supported by the National Science Foundation (award number CNS-0821794) and the University of Colorado Boulder. The Janus supercomputer is a joint effort of the University of Colorado Boulder, the University of Colorado Denver and the National Center for Atmospheric Research."
+This research was supported in part by an award from the Department of Energy (DOE) Office of Science Graduate Fellowship Program (DOE SCGF).
+The DOE SCGF Program was made possible in part by the American Recovery and Reinvestment Act of 2009.
+The DOE SCGF program is administered by the Oak Ridge Institute for Science and Education for the DOE.
+ORISE is managed by Oak Ridge Associated Universities (ORAU) under DOE contract number DE-AC05-06OR23100.
+All opinions expressed in this paper are the author's and do not necessarily reflect the policies and views of DOE, ORAU, or ORISE.
 
-\begin{thebibliography}{99}
-  \bibitem{...} ....
-\end{thebibliography}
+"This work utilized the Janus supercomputer, which is supported by the National Science Foundation (award number CNS-0821794) and the University of Colorado Boulder.
+The Janus supercomputer is a joint effort of the University of Colorado Boulder, the University of Colorado Denver and the National Center for Atmospheric Research."
 
 \end{document}
