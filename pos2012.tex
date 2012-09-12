@@ -1,4 +1,5 @@
 \documentclass{PoS}
+\usepackage{amsmath}
 
 % Laziness shortcuts
 \newcommand{\refcite}[1]{Ref.~\cite{#1}}
@@ -39,8 +40,8 @@ The action matching process is summarized in two steps:
 \begin{enumerate}
   \item \emph{Matching:}  Match a given operator measured on two lattices blocked down to the same size $L_b$, where $L_b=\frac{L}{2^{n_b}}$
   \begin{align}
-    \Delta\beta(\beta;n_b,L_b) & = \beta-\beta^{\prime}
-    \langle O(\beta;n_b,L_b)\rangle & = \langleO(\beta^{\prime};n_b-1,L_b)\rangle
+    \Delta\beta(\beta;n_b,L_b) & = \beta-\beta^{\prime} \\
+    \langle O(\beta;n_b,L_b)\rangle & = \langle O(\beta^{\prime};n_b-1,L_b)\rangle
   \end{align}
   \item \emph{Optimization:}  Tune the blocking parameter such that consecutive steps yield the same $\Delta\beta$
   \begin{equation}
