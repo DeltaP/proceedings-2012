@@ -3,6 +3,7 @@
 
 % Laziness shortcuts
 \newcommand{\refcite}[1]{Ref.~\cite{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
 
 \title{MCRG study of 8 and 12 fundamental flavors}
 \ShortTitle{MCRG study of 8 and 12 fundamental flavors}
@@ -16,44 +17,40 @@
   We explore the behavior of the beta function of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions using Monte Carlo Renormalization Group (MCRG) techniques.
 }
 
-\FullConference{The 30th International Symposium on Lattice Field Theory\\
-                 June 24--29, 2012\\
+\FullConference{The 30th International Symposium on Lattice Field Theory \\
+                 June 24--29, 2012 \\
                  Cairns, Australia}
 
 \begin{document}
 
 \section{Introduction}
 The behavior of strongly coupled ...
+Determining the running of the coupling described by the renormalization group $\beta$ function is very important to understand the characteristics of gauge--fermion systems.
+In this work we apply the Monte Carlo Renormalization Group (MCRG) two-lattice matching technique to explore the RG properties of SU(3) gauge theories with many light fermions.
+We are simultaneously carrying out complementary analyses of these systems , two of which (studies of the Dirac eigenmode scaling and finite-temperature transitions) are discussed in other contributions to these proceedings~\cite{Hasenfratz:2012fp, Schaich:2012fr}.
 
-Our groups MCRG analysis is part of a broader study of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions.
-Other characteristics of these theories that we have studied include the finite temperature phase diagram, eigenvalues, and mass spectra.
-Understanding how the beta function runs is very importaint in determining basic characteristics of a theory.
-Several other groups are also interested in these theories, many of whome have also calculated the step scaling function using Schr\"odinger functional (other ways).
-
-\section{Two Lattice MCRG Matching}
-For a more detailed description of two lattic matching see \refcite{annaMCRG}.
-The fundamental idea of two lattice matching is to geneate pairs of couplings $(\beta, \beta^{\prime})$ such that the lattice correlation length obeys $\xi(\beta)=2\xi(\beta^{\prime})$.
-Here we define the step scaling function, the analogue of the RG $\beta$ function, as $s_b= \lim_{n_b\to\infty}(\Delta\beta=\beta - \beta^{\prime})$.
+\section{\label{sec:MCRG}Two-Lattice MCRG Matching}
+The goal of two-lattice matching is to locate pairs of couplings $(\beta, \beta^{\prime})$ at which the lattice correlation length obeys $\xi(\beta)=2\xi(\beta^{\prime})$.
+We define the step scaling function, the analogue of the RG $\beta$ function, as $s_b= \lim_{n_b\to\infty}(\Delta\beta=\beta - \beta^{\prime})$.
 Two blocked actions are identical if all blocked observables' expectation values are identical.
-The action matching process is summarized in two steps:
-
+The action matching process involves two steps:
 \begin{enumerate}
-  \item \emph{Matching:}  Match a given operator measured on two lattices blocked down to the same size $L_b$, where $L_b=\frac{L}{2^{n_b}}$
+  \item \emph{Matching:} Match a given operator measured on two lattices blocked down to the same size $L_b$, where $L_b=\frac{L}{2^{n_b}}$
   \begin{align}
     \Delta\beta(\beta;n_b,L_b) & = \beta-\beta^{\prime} \\
     \langle O(\beta;n_b,L_b)\rangle & = \langle O(\beta^{\prime};n_b-1,L_b)\rangle
   \end{align}
-  \item \emph{Optimization:}  Tune the blocking parameter such that consecutive steps yield the same $\Delta\beta$
+  \item \emph{Optimization:} Tune the blocking parameter such that consecutive steps yield the same $\Delta\beta$
   \begin{equation}
     \Delta\beta(\beta;n_b,L_b,\alpha_{optimal})=\Delta\beta(\beta;n_b-1,L_b,\alpha_{optimal})
   \end{equation}
 \end{enumerate}
 
-To accomplish this end I generate three lattices sizes over a variety of $\beta$ values.
-We used a blocking factor of two and three volume sizes to do finite volume corrected two lattice matching: $24^3x48$, $12^3x24$, $6^3x12$.
+To properly account for finite-volume effects in this procedure, we compare three different lattice volumes~\cite{Hasenfratz:2011xn}.
+We use a blocking factor of two to match lattice volumes $24^3x48$, $12^3x24$, $6^3x12$.
 All of our volumes were blocked down to a volume of $3^3x6$ at which point we performed matching with the $24^3x48$ and $12^3x24$ as well as the $12^3x24$ and $6^3x12$.
-This gives me two values of $\Delta\beta$.
-To optimize the block transformation we tune a blocking parameter $\alpha$; $\alpha_{optimal}$ is the value of $\alpha$ for which the two values of $\Delta\beta$ for the $24^3x24\to3^3x6$ matching and the $12^3x24\to3^3x6$ matching are identical.
+For each blocking parameter $\alpha$ this produces two values of $\Delta\beta$.
+We determine the optimal $\alpha_{optimal}$ by requiring that the two values of $\Delta\beta$ for the $24^3x24\to3^3x6$ matching and the $12^3x24\to3^3x6$ matching are identical.
 Once we have optimized the blocking, $s_b$ can be approximated as $\Delta\beta_{optimal}$.
 
 A great feature of MCRG is that it is fairly insensitive to finite volume effects since we are always comparing measurements on the same lattice size.
@@ -66,17 +63,16 @@ The lattices used to generate this MCRG result are the same lattices that were u
 Our results for 8 flavors shows a step scaling function that is running 
 
 \section{12 Flavor Results}
-Our resutls for 12 flavors 
+Our results for 12 flavors 
 
-\section{Wilson Flow}
+\section{Determining a Discrete $\beta$ Function}
+As discussed in \secref{sec:MCRG}, the optimization step in MCRG two-lattice matching has the consequence that a different RG $\beta$ function is probed for each large-volume coupling (each point in Figs.~\ref{fig:8f_sb} and \ref{fig:12f_sb}).
+We conclude with a proposal to determine a single (discrete) $\beta$ function at all couplings, which will greatly simplify the presentation and interpretation of our future results.
+Instead of optimizing the RG block transformation, we carry out two-lattice matching after using the Wilson flow.
+The Wilson flow was recently used to compute a step-scaling function in \refcite{Fodor:2012td}; by incorporating it into an MCRG analysis we need not rely on a perturbative definition of a renormalized coupling.
 
-\section{Wilson Flow and MCRG...a shotgun wedding}
-
-\section{Conclusion}
-
-\section{Acknowledgments}
-Thank Nogradi\dots
-
+\section*{Acknowledgments}
+We thank D\'aniel N\'ogr\'adi for helpful comments on the Wilson flow.
 This research was supported in part by an award from the Department of Energy (DOE) Office of Science Graduate Fellowship Program (DOE SCGF).
 The DOE SCGF Program was made possible in part by the American Recovery and Reinvestment Act of 2009.
 The DOE SCGF program is administered by the Oak Ridge Institute for Science and Education for the DOE.
@@ -86,4 +82,6 @@ All opinions expressed in this paper are the author's and do not necessarily ref
 "This work utilized the Janus supercomputer, which is supported by the National Science Foundation (award number CNS-0821794) and the University of Colorado Boulder.
 The Janus supercomputer is a joint effort of the University of Colorado Boulder, the University of Colorado Denver and the National Center for Atmospheric Research."
 
+\bibliographystyle{utphys}
+\bibliography{pos2012}
 \end{document}

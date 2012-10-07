@@ -1,0 +1,24 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{1}
+
+\bibitem{Hasenfratz:2012fp}
+A.~Hasenfratz, A.~Cheng, G.~Petropoulos and D.~Schaich,
+  \href{http://pos.sissa.it/archive/conferences/164/034/Lattice
+  2012_034.pdf}{{\em PoS} {\bf Lattice 2012} (2012)  034},
+  \href{http://arxiv.org/abs/1207.7162}{{\tt arXiv:1207.7162}}.
+
+\bibitem{Schaich:2012fr}
+D.~Schaich, A.~Cheng, A.~Hasenfratz and G.~Petropoulos,
+  \href{http://pos.sissa.it/archive/conferences/164/034/Lattice
+  2012_028.pdf}{{\em PoS} {\bf Lattice 2012} (2012)  028},
+  \href{http://arxiv.org/abs/1207.7164}{{\tt arXiv:1207.7164}}.
+
+\bibitem{Hasenfratz:2011xn}
+A.~Hasenfratz, \href{http://dx.doi.org/10.1103/PhysRevLett.108.061601}{{\em
+  Phys. Rev. Lett.} {\bf 108} (2012)  061601},
+  \href{http://arxiv.org/abs/1106.5293}{{\tt arXiv:1106.5293}}.
+
+\bibitem{Fodor:2012td}
+Z.~Fodor, K.~Holland, J.~Kuti, D.~Nogradi and C.~H. Wong,
+  \href{http://arxiv.org/abs/1208.1051}{{\tt arXiv:1208.1051}}.
+
+\end{thebibliography}\endgroup
