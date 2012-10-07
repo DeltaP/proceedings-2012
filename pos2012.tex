@@ -1,7 +1,9 @@
 \documentclass{PoS}
 \usepackage{amsmath}
+\usepackage{cancel}
 
 % Laziness shortcuts
+\newcommand{\Sb}{\ensuremath{\cancel{S^4}} }
 \newcommand{\refcite}[1]{Ref.~\cite{#1}}
 \newcommand{\secref}[1]{Section~\ref{#1}}
 
@@ -67,6 +69,9 @@ Our MCRG results are consistent with the analysis of the eigenvalue spectrum and
 \section{12 Flavor Results}
 Our results for 12 flavors are consistent with the existence of an infrared fixed point.
 The results themselves illustrate the issue discussed above, that the MCRG analysis probes a different RG $\beta$ function for each coupling.
+From $\beta = $\dots to $\beta = $\dots there is a plateau where the step scaling function is consistent with zero.
+This plateau behavior was also seen for different actions in previous investigations, which observed a change of sign in the step scaling function.
+Due to the first-order phase transition to the \Sb phase, we are unable to probe strong enough coupling to observe clear backward flow for this action.
 
 \section{Determining a Discrete $\beta$ Function}
 As discussed in \secref{sec:MCRG}, the optimization step in MCRG two-lattice matching has the consequence that a different RG $\beta$ function is probed for each large-volume coupling (each point in Figs.~\ref{fig:8f_sb} and \ref{fig:12f_sb}).
