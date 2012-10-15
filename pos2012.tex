@@ -3,8 +3,10 @@
 \usepackage{cancel}
 
 % Laziness shortcuts
+\newcommand{\X}{\ensuremath{\!\times\!} }
 \newcommand{\Sb}{\ensuremath{\cancel{S^4}} }
 \newcommand{\refcite}[1]{Ref.~\cite{#1}}
+\newcommand{\fig}[1]{Fig.~\ref{#1}}
 \newcommand{\secref}[1]{Section~\ref{#1}}
 
 \title{MCRG study of 8 and 12 fundamental flavors}
@@ -16,10 +18,11 @@
 }
 
 \abstract{
-  We explore the behavior of the beta function of SU(3) gauge theories with 8 and 12 flavors of fundamental fermions using Monte Carlo Renormalization Group (MCRG) techniques.
-  Our results for 8 flavors show confinement while our results for 12 flavors are indicative of an infrared fixed point (IRFP).
-  The difficulty of obtaining a single beta function due to the optimization of our block transformation is discussed.
-  To solve this problem propose using the Wilson Flow to bring the configurations to the renormalized trajectory before blocking.
+  We explore the behavior of the renormalization group $\beta$ function of SU(3) gauge theories with $N_f = 8$ and 12 flavors of nearly-massless fermions using the Monte Carlo Renormalization Group (MCRG) two-lattice matching technique.
+  Two-lattice matching produces a step-scaling function $s_b$; for $N_f = 8$ we find $s_b$ to be clearly non-zero from weak coupling until the onset of strong-coupling lattice artifacts.
+  For $N_f = 12$, in contrast, the step-scaling function exhibits a zero that indicates the presence of an infrared fixed point.
+  To carry out MCRG two-lattice matching, we optimize the RG block transformation, which produces a step-scaling function that does not correspond to a unique RG $\beta$ function.
+  We propose to address this issue by using the Wilson flow to eliminate the need for optimization of the RG block transformation, and present some preliminary results produced by this approach.
 }
 
 \FullConference{The 30th International Symposium on Lattice Field Theory \\
@@ -29,17 +32,19 @@
 \begin{document}
 
 \section{Introduction}
-The behavior of strongly coupled gauge theories with many flavors of chiral fermions is both an interesting question of field theory and has potentially useful applications for composite Higgs or dark matter canidates.
+The behavior of strongly-coupled gauge theories with many flavors of massless fermions is both an interesting question of field theory and has potentially useful applications for composite Higgs or dark matter candidates.
 Determining the running of the coupling described by the renormalization group $\beta$ function is very important to understand the characteristics of gauge--fermion systems.
-The $\beta$ function can be used to differentiate theories that are confining from those that are conformal.
-Furthermore the $\beta$ function characterizes walking theories from running theories.
 In this work we apply the Monte Carlo Renormalization Group (MCRG) two-lattice matching technique to explore the RG properties of SU(3) gauge theories with many light fermions.
-We are simultaneously carrying out complementary analyses of these systems , two of which (studies of the Dirac eigenmode scaling and finite-temperature transitions) are discussed in other contributions to these proceedings~\cite{Hasenfratz:2012fp, Schaich:2012fr}.
-The lattices used in these studies have a mixed fundamental adjoint gauge action and n-HYP smeared staggered fermions.
+We are simultaneously carrying out complementary analyses of these systems, two of which (studies of the Dirac eigenmode scaling and finite-temperature transitions) are discussed in other contributions to these proceedings~\cite{Hasenfratz:2012fp, Schaich:2012fr}.
+
+Our gauge action consists of fundamental and adjoint plaquette terms and we use nHYP-smeared staggered fermions.
+The details of the lattice action can be found in \refcite{Hasenfratz:2011xn}.
+In this work we are interested in the weak coupling behavior of these systems, and we avoid the single-site shift symmetry broken ($\Sb$) lattice phase discussed in Refs.~\cite{Cheng:2011ic, Schaich:2012fr}.\footnote{An interpretation of the \Sb phase in terms of relevant next-to-nearest neighbor interactions was recently presented by \refcite{Deuzeman:2012ee}.}
+%The $N_f=4$, 8, 12 and 16 flavor systems have been investigated extensively by several other groups; recent references include~\cite{Fodor:2012uu, Aoki:2012eq, Deuzeman:2012pv, Lin:2012iw} and earlier works are reviewed in \refcite{Neil:2012cb}.
 
 \section{\label{sec:MCRG}Two-Lattice MCRG Matching}
 The goal of two-lattice matching is to locate pairs of couplings $(\beta, \beta^{\prime})$ at which the lattice correlation length obeys $\xi(\beta)=2\xi(\beta^{\prime})$.
-We define the step scaling function, the analogue of the RG $\beta$ function, as $s_b= \lim_{n_b\to\infty}(\Delta\beta=\beta - \beta^{\prime})$.
+We define the step-scaling function as $s_b = \lim_{n_b\to\infty}(\Delta\beta=\beta - \beta^{\prime})$.
 Two blocked actions are identical if all blocked observables' expectation values are identical.
 The action matching process involves two steps:
 \begin{enumerate}
@@ -55,10 +60,10 @@ The action matching process involves two steps:
 \end{enumerate}
 
 To properly account for finite-volume effects in this procedure, we compare three different lattice volumes~\cite{Hasenfratz:2011xn}.
-We use a blocking factor of two to match lattice volumes $24^3\mbox{x}48$, $12^3\mbox{x}24$, and $6^3\mbox{x}12$.
-All of our volumes were blocked down to a volume of $3^3\mbox{x}6$ at which point we performed matching with the $24^3\mbox{x}48$ and $12^3\mbox{x}24$ as well as the $12^3\mbox{x}24$ and $6^3\mbox{x}12$.
+We use a blocking factor of two to match lattice volumes $24^3\X48$, $12^3\X24$ and $6^3\X12$.
+All of our volumes were blocked down to a volume of $3^3\X6$ at which point we performed matching with the $24^3\X48$ and $12^3\X24$ as well as the $12^3\X24$ and $6^3\X12$.
 For each blocking parameter $\alpha$ this produces two values of $\Delta\beta$.
-We determine the optimal $\alpha_{optimal}$ by requiring that the value of $\Delta\beta$ for the $24^3\mbox{x}48\to3^3\mbox{x}6$ matching and the $12^3\mbox{x}24\to3^3\mbox{x}6$ matching are identical.
+We determine the optimal $\alpha_{optimal}$ by requiring that the two values of $\Delta\beta$ for the $24^3\X48 \to 3^3\X6$ matching and the $12^3\X24 \to 3^3\X6$ matching are identical.
 Once we have optimized the blocking, $s_b$ can be approximated as $\Delta\beta_{optimal}$.
 
 A great feature of MCRG is that it is fairly insensitive to finite volume effects since we are always comparing measurements on the same lattice size.
@@ -68,23 +73,24 @@ Finally MCRG is a nice method for determining the step scaling function because 
 The lattices used to generate this MCRG result are the same lattices that were used throughout our program of study.
 
 \section{\label{sec:8flavor}8 Flavor Results}
-Our results for 8 flavors show a step scaling function that does not have in IR fixed point and as expected is confining.
-Matching could not be performed at couplings stronger than $\beta = 5.4$ because the matching ran into the \Sb phase and matching can not be performed across a first order phase transition.
-Analysis at weaker coupling was not performed because our value for the step scaling function was already approaching the perturbative value and going further would require tuning our block transformation beyond changing $\alpha$.  
-Our MCRG results are consistent with the analysis of the eigenvalue spectrum and the finite temperature transitions.
+Our results for 8 flavors show a step scaling function that does not have an IR fixed point.
+Matching could not be performed at couplings stronger than $\beta = 5.4$ due to the presence of the \Sb phase.
+At weaker couplings, the step-scaling function approaches the perturbative value.
+%Our MCRG results are consistent with the analysis of the eigenvalue spectrum and the finite temperature transitions.
 
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=3.5in]{8flavor.pdf}
-  \caption{Our results for the step scaling function with 8 flavors of fermions.}
+  \caption{The step scaling function with 8 flavors of fermions.}
   \label{fig:8flavor}
 \end{figure}
 
 \section{12 Flavor Results}
 Our results for 12 flavors are consistent with the existence of an infrared fixed point.
 Previous results for this system using a different action saw direct evidence of backwards running which we were unable to reproduce using this action for two reasons.
-The first problem is that the matching ran into the \Sb phase in strong coupling; as mentioned in section \secref{8flavor} matching can not be performed across a first order phase transition. 
-The second issue is caused by the optimization of $\alpha$.  Because we use a different block transformation at each value of $\beta$ in our analysis we finding a different renormalized trajectory at each point.
+The first problem is that the matching ran into the \Sb phase in strong coupling; as mentioned in section \secref{sec:8flavor} matching can not be performed across a first order phase transition. 
+The second issue is caused by the optimization of $\alpha$.
+Because we use a different block transformation at each value of $\beta$ in our analysis we find a different renormalized trajectory at each point.
 The presence of an infrared fixed point complicates matters because its location will be different for each renormalized trajectory.
 The consequence is that changing $\alpha$ moves the infrared fixed point.
 In our analysis it appears that optimizing $\alpha$ brings the fixed point closer to the $\beta$ value that we are probing resulting in a plateau of values between $\beta=4$ and $\beta=7$ where $s_b=0$ within errors.
@@ -93,29 +99,30 @@ This plateau behavior was also seen for different actions in previous investigat
 \begin{figure}[htpb]
   \centering
   \includegraphics[width=3.5in]{12flavor.pdf}
-  \caption{Our results for the step scaling function with 12 flavors of fermions}
+  \caption{The step scaling function with 12 flavors of fermions}
   \label{fig:12flavor}
 \end{figure}
 
-Moving into weaker coupling our results approach perturbation theory.  As with 8 flavors, going further into weaker coupling is possible but requires a change of our block transformation more involved than changing $\alpha$.  
+As with $N_f = 8$ (\fig{fig:8flavor}), our 12-flavor step-scaling function approaches the perturbative result at weaker couplings.
 
 \section{Determining a Discrete $\beta$ Function}
 As discussed in \secref{sec:MCRG}, the optimization step in MCRG two-lattice matching has the consequence that a different RG $\beta$ function is probed for each large-volume coupling (each point in Figs.~\ref{fig:8flavor} and \ref{fig:12flavor}).
 We conclude with a proposal to determine a single (discrete) $\beta$ function at all couplings, which will greatly simplify the presentation and interpretation of our future results.
-Instead of optimizing the RG block transformation, we carry out two-lattice matching after using the Wilson flow.
+Instead of optimizing the RG block transformation, we carry out two-lattice matching after using the Wilson flow to move the system closer to the renormalized trajectory.
+
 The Wilson flow was recently used to compute a step-scaling function in \refcite{Fodor:2012td}; by incorporating it into an MCRG analysis we need not rely on a perturbative definition of a renormalized coupling.
-Preliminary results show that this Wilson flow MCRG hybrid works and reproduces results of \refcite{Fodor:2012td}.
+Preliminary results\dots
 
 \section*{Acknowledgments}
 We thank D\'aniel N\'ogr\'adi for helpful comments on the Wilson flow.
-This research was supported in part by an award from the Department of Energy (DOE) Office of Science Graduate Fellowship Program (DOE SCGF).
+This research was partially supported by the U.S.~Department of Energy (DOE) through Grant No.~DE-FG02-04ER41290 (A.~C., A.~H.\ and D.~S.) and by the DOE Office of Science Graduate Fellowship Program (SCGF).
 The DOE SCGF Program was made possible in part by the American Recovery and Reinvestment Act of 2009.
-The DOE SCGF program is administered by the Oak Ridge Institute for Science and Education for the DOE.
+The DOE SCGF Program is administered by the Oak Ridge Institute for Science and Education for the DOE.
 ORISE is managed by Oak Ridge Associated Universities (ORAU) under DOE contract number DE-AC05-06OR23100.
-All opinions expressed in this paper are the author's and do not necessarily reflect the policies and views of DOE, ORAU, or ORISE.
-
-"This work utilized the Janus supercomputer, which is supported by the National Science Foundation (award number CNS-0821794) and the University of Colorado Boulder.
-The Janus supercomputer is a joint effort of the University of Colorado Boulder, the University of Colorado Denver and the National Center for Atmospheric Research."
+All opinions expressed in this paper are those of the authors and do not necessarily reflect the policies and views of DOE, ORAU, or ORISE.
+Numerical calculations were carried out on the HEP-TH and Janus clusters at the University of Colorado; at Fermilab under the auspices of USQCD supported by the DOE SciDAC program; and at the San Diego Computing Center through the Extreme Science and Engineering Discovery Environment supported by National Science Foundation Grant No.~OCI-1053575.
+The Janus supercomputer is supported by the National Science Foundation (award number CNS-0821794) and the University of Colorado Boulder.
+The Janus supercomputer is a joint effort of the University of Colorado Boulder, the University of Colorado Denver and the National Center for Atmospheric Research.
 
 \bibliographystyle{utphys}
 \bibliography{pos2012}
