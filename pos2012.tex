@@ -156,8 +156,8 @@ In IR-conformal systems, we can investigate the scheme-dependence of the \be fun
 
 
 % ------------------------------------------------------------------
-\section{Results} % In progress
-\subsection{\label{sec:MCRGresults}Traditional MCRG} % In progress
+\section{Results} % Draft complete
+\subsection{\label{sec:MCRGresults}Traditional MCRG} % Draft complete
 Our results for the bare step-scaling function $s_b$ from traditional MCRG two-lattice matching are shown in \fig{fig:MCRG}.
 On the largest $24^3\X48$ lattices that we use in this current study, we work with fermion masses $m = 0.0025$ to stay near the $m = 0$ critical surface.
 Under RG blocking with scale factor $s$, the fermion mass changes as $s^{1 + \ga_m}$ where $\ga_m$ is the mass anomalous dimension.
@@ -171,7 +171,7 @@ As in Refs.~\cite{Hasenfratz:2011xn, Hasenfratz:2011np}, we do not explore weak 
 
 As mentioned above, the error bars shown in \fig{fig:MCRG} are dominated by the spread in predictions for $s_b$ from matching four-, six- and eight-link loops.
 Each of these observables can predict a different optimal $\al$, and for fixed \al each can predict a different $\De\be_F$.
-Preliminary results presented at the conference determined uncertainties from the full spread of optimal \al predicted by the different observables; here, instead, we average over the observables to determine the optimal \al and associated uncertainties. % Is ``average over'' clear enough?
+Preliminary results presented at the conference determined uncertainties from the full spread of optimal \al predicted by the different observables; here, instead, we average over the observables to find the optimal \al and associated uncertainties. % Is ``average over'' clear enough?
 
 \begin{figure}[htpb]
   \includegraphics[width=0.45\linewidth]{8flavor.pdf}\hfill
@@ -184,11 +184,11 @@ Preliminary results presented at the conference determined uncertainties from th
 
 
 % ------------------------------------------------------------------
-\subsection{\label{sec:WMCRGresults}Wilson-flowed MCRG} % In progress
+\subsection{\label{sec:WMCRGresults}Wilson-flowed MCRG} % Draft complete
 \fig{fig:WMCRG} presents our results for the bare step-scaling function $s_b$ from Wilson-flowed MCRG two-lattice matching.
 We continue using two sequential HYP smearings in our RG blocking transformation, but now fix the smearing parameters to $(0.5, 0.2, 0.2)$.
-We again use $24^3\X48$ and $12^3\X24$ lattices with fermion masses $m = 0.0025$ and $m = 0.01$, respectively.
-In this preliminary study we don't yet employ the volume-corrected optimization discussed in \refcite{Hasenfratz:2011xn}, which introduces only a small error for these lattice volumes.
+We again use $24^3\X48$ and $12^3\X24$ lattices with fermion masses $m = 0.0025$ and $m = 0.01$, respectively, and determine uncertainties in the same way as described in the previous subsection.
+In this preliminary study we don't yet employ the volume-corrected optimization discussed in \refcite{Hasenfratz:2011xn}; for our lattice volumes, \refcite{Hasenfratz:2011xn} found that neglecting this finite-volume correction introduces only a small additional error.
 Our final results will use the appropriate optimization, and will also present further consistency checks from larger lattices up to $32^3\X64$.
 
 \begin{figure}[htpb]
@@ -198,13 +198,11 @@ Our final results will use the appropriate optimization, and will also present f
   \label{fig:WMCRG}
 \end{figure}
 
-As discussed above, the results in \fig{fig:WMCRG} have a much cleaner interpretation since the bare step-scaling function $s_b$ now corresponds to a unique discrete \be function.
-Our 12-flavor results directly show an IRFP, with backward flow for $\be_F < 5$.
-While the location of this IRFP at $5 < \be_F^{\star} < 6$ is renormalization scheme-dependent, its existence is physical and predicts that the 12-flavor system is conformal in the infrared.
-
-\TODO{Further comments on plots\dots}
-
-\TODO{More remarks on next steps?}
+While our results in \fig{fig:WMCRG} from combining the Wilson flow with MCRG two-lattice matching are qualitatively similar to the results of the traditional approach in \fig{fig:MCRG}, we can now identify the bare step-scaling function $s_b$ with a unique discrete \be function.
+In the renormalization scheme defined by our RG blocking transformation with HYP-smearing parameters $(0.5, 0.2, 0.2)$, we find a 12-flavor IRFP at $5 < \be_F^{\star} < 6$.
+Although $\be_F^{\star}$ is scheme-dependent, the existence of this IRFP is physical.
+We are currently exploring other choices of renormalization schemes, to non-perturbatively investigate the scheme-dependence of the \be function near the IRFP~\cite{Ryttov:2012nt}.
+At weaker couplings, we will also attempt to use similar explorations to study scaling violations in our lattice systems.
 % ------------------------------------------------------------------
 
 
