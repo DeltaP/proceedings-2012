@@ -8,6 +8,7 @@
 \newcommand{\be}{\ensuremath{\beta} }
 \newcommand{\ga}{\ensuremath{\gamma} }
 \newcommand{\De}{\ensuremath{\Delta} }
+\newcommand{\lsim}{\ensuremath{\lesssim} }
 \newcommand{\vev}[1]{\ensuremath{\left\langle #1 \right\rangle} }
 \newcommand{\X}{\ensuremath{\!\times\!} }
 \newcommand{\Sb}{\ensuremath{\cancel{S^4}} }
@@ -33,9 +34,8 @@
   We study the renormalization group properties of SU(3) gauge theories with $N_f = 8$ and 12 nearly-massless fermions, using Monte Carlo Renormalization Group (MCRG) two-lattice matching techniques to predict bare step-scaling functions $s_b$.
   Traditional MCRG two-lattice matching requires that the renormalization scheme be optimized for each bare lattice coupling, so that $s_b$ is a composite of many different discrete \be functions.
   We propose an improved procedure that uses the Wilson flow to eliminate the need for this optimization of the RG blocking transformation.
-  Using both the traditional and new procedures, our 12-flavor results for $s_b$ show a change of sign and backward flow, indicating an infrared fixed point.
-  For $N_f = 8$, in contrast, $s_b$ is significantly different from zero until strong-coupling lattice artifacts obstruct two-lattice matching.
-  While both procedures produce qualitatively similar bare step-scaling functions, the new $s_b$ obtained by combining the Wilson flow with MCRG two-lattice matching have the distinct advantage of corresponding to unique discrete \be functions.
+  While our 12-flavor results indicate an infrared fixed point, $s_b$ for $N_f = 8$ is significantly different from zero until strong-coupling lattice artifacts obstruct two-lattice matching.
+  Although both procedures produce qualitatively similar bare step-scaling functions, the new $s_b$ obtained by combining the Wilson flow with MCRG two-lattice matching have the distinct advantage of corresponding to unique discrete \be functions.
 }
 
 \FullConference{The 30th International Symposium on Lattice Field Theory \\ June 24--29, 2012 \\ Cairns, Australia}
@@ -63,7 +63,7 @@ In this work we only investigate couplings weak enough to avoid the \Sb lattice 
 In the next section, we review how the MCRG two-lattice matching technique determines the step-scaling function $s_b$ in the bare parameter space.
 Although working entirely with bare parameters would be disadvantageous if our aim were to produce renormalized phenomenological predictions for comparison with experiment, our current explorations of the phase structures of the 8- and 12-flavor systems benefit from this fully non-perturbative RG approach, especially for relatively strong couplings.
 In \secref{sec:MCRGresults} we present our results from this traditional approach.
-While our 8-flavor $s_b$ is significantly different from zero, for $N_f = 12$ we observe $s_b$ changing sign around $\be_F \approx 7.5$, indicating an infrared fixed point (IRFP).
+While our 8-flavor $s_b$ is significantly different from zero, for $N_f = 12$ we observe $s_b \lsim 0$ for $\be_F < 8$, indicating an infrared fixed point (IRFP).
 
 We emphasize that while the existence of an IRFP is physical (scheme-independent), the coupling at which it is located depends on the choice of renormalization scheme.
 A limitation of traditional MCRG two-lattice matching is the need to optimize the RG blocking transformation separately for each lattice coupling $\be_F$.
@@ -164,9 +164,10 @@ Under RG blocking with scale factor $s$, the fermion mass changes as $s^{1 + \ga
 Therefore we use $m = 0.01$ on $12^3\X24$ and $m = 0.02$ on $6^3\X12$ lattices.
 We have explicitly checked that these masses are small enough to introduce only negligible finite-mass effects, by generating lattices with $m = 0$ and obtaining indistinguishable results for some points.
 
-While our 8-flavor results for $s_b$ are significantly different from zero for all couplings we can explore, for $N_f = 12$ we find $s_b < 0$ for $\be_F < 8$.
+While our 8-flavor results for $s_b$ are significantly different from zero for all couplings we can explore, for $N_f = 12$ we find $s_b \lsim 0$ for $\be_F < 8$, indicating an IRFP.
 Recall that our optimization of the RG blocking transformation means that we use a different renormalization scheme for each coupling $\be_F$, so these bare step scaling functions are composites of several different discrete \be functions.
-For both $N_f = 8$ and 12, we encounter the \Sb lattice phase at strong coupling, where we cannot perform matching.
+For example, with $N_f = 12$ at $5 \leq \be_F \leq 6$, our optimization selects a renormalization scheme with a fixed point near $\be_F$, so that $s_b$ is roughly consistent with zero over an extended range.
+Both our $N_f = 8$ and 12 simulations encounter the \Sb lattice phase at strong coupling, where we cannot perform matching.
 As in Refs.~\cite{Hasenfratz:2011xn, Hasenfratz:2011np}, we do not explore weak enough couplings to recover the two-loop perturbative predictions $s_b \approx 0.6$ (0.3) for $N_f = 8$ (12).
 
 As mentioned above, the error bars shown in \fig{fig:MCRG} are dominated by the spread in predictions for $s_b$ from matching four-, six- and eight-link loops.
@@ -199,7 +200,7 @@ Our final results will use the appropriate optimization, and will also present f
 \end{figure}
 
 While our results in \fig{fig:WMCRG} from combining the Wilson flow with MCRG two-lattice matching are qualitatively similar to the results of the traditional approach in \fig{fig:MCRG}, we can now identify the bare step-scaling function $s_b$ with a unique discrete \be function.
-In the renormalization scheme defined by our RG blocking transformation with HYP-smearing parameters $(0.5, 0.2, 0.2)$, we find a 12-flavor IRFP at $5 < \be_F^{\star} < 6$.
+In the renormalization scheme defined by our RG blocking transformation with HYP-smearing parameters $(0.5, 0.2, 0.2)$, we find a 12-flavor IRFP at $5 < \be_F^{\star} \lsim 6$.
 Although $\be_F^{\star}$ is scheme-dependent, the existence of this IRFP is physical.
 We are currently exploring other choices of renormalization schemes, to non-perturbatively investigate the scheme-dependence of the \be function near the IRFP~\cite{Ryttov:2012nt}.
 At weaker couplings, we will also attempt to use similar explorations to study scaling violations in our lattice systems.
