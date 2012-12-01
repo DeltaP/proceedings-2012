@@ -62,17 +62,17 @@ In this work we only investigate couplings weak enough to avoid the \Sb lattice 
 
 In the next section, we review how the MCRG two-lattice matching technique determines the step-scaling function $s_b$ in the bare parameter space.
 Although working entirely with bare parameters would be disadvantageous if our aim were to produce renormalized phenomenological predictions for comparison with experiment, our current explorations of the phase structures of the 8- and 12-flavor systems benefit from this fully non-perturbative RG approach, especially for relatively strong couplings.
-In \secref{sec:MCRGresults} we present our results from this traditional approach.
+In \secref{sec:MCRGresults} we present our results from the traditional MCRG two-lattice matching technique.
 While our 8-flavor $s_b$ is significantly different from zero, for $N_f = 12$ we observe $s_b \lsim 0$ for $\be_F < 8$, indicating an infrared fixed point (IRFP).
 
 We emphasize that while the existence of an IRFP is physical (scheme-independent), the coupling at which it is located depends on the choice of renormalization scheme.
 A limitation of traditional MCRG two-lattice matching is the need to optimize the RG blocking transformation separately for each lattice coupling $\be_F$.
 As we explain below, this optimization forces us to probe a different renormalization scheme for each $\be_F$, so that the bare step-scaling function we obtain is a composite of many different discrete \be functions.
 
-To address this issue, in \secref{sec:WMCRG} we propose a new, improved procedure that predicts a bare step-scaling function corresponding to a unique discrete \be function.
+To address this issue, in \secref{sec:WMCRG} we propose a new, improved procedure that predicts a bare step-scaling function corresponding to a unique \be function.
 This improved procedure applies the Wilson flow~\cite{Narayanan:2006rf, Luscher:2010iy} to the lattice system before performing the RG blocking transformation.
 Because the Wilson flow moves the system in the infinite-dimensional space of lattice-action terms without changing the lattice scale, we can use it to approach the renormalized trajectory corresponding to a fixed RG blocking transformation.
-By optimizing the flow time $t_f$ for fixed renormalization scheme at each coupling, we can now carry out the two-lattice matching without a need for further optimization.
+By optimizing the flow time $t_f$ at each coupling, all with the same renormalization scheme, we can carry out the two-lattice matching without a need for further optimization.
 We present some promising but preliminary results of this approach in \secref{sec:WMCRGresults}.
 % ------------------------------------------------------------------
 
@@ -95,7 +95,7 @@ The renormalized trajectory connects these two fixed points.
 When RG flows approach this renormalized trajectory, the two-lattice matching can be performed and interpreted the same way as in confining systems.
 In this region the gauge coupling flows to stronger couplings, $\De\be_F > 0$ corresponding to a negative RG \be function.
 The situation is less clear at stronger couplings where we might na\"ively expect backward flow.
-If there is no ultraviolet FP in this region that would drive the RG flow along a renormalized trajectory, the two-lattice matching might become meaningless.
+If there is no ultraviolet FP in this region to drive the RG flow along a renormalized trajectory, the two-lattice matching might become meaningless.
 This issue affects every method that attempts to determine the flow of the gauge coupling in IR-conformal systems at strong coupling.
 In all published studies that report an IRFP, backward flow has only been observed in a very limited range of couplings in the immediate vicinity of the IRFP (cf.~\refcite{Giedt:2012LAT}).
 
@@ -125,7 +125,7 @@ As a result, the bare step-scaling function we obtain is a composite of many dif
   \centering
   \includegraphics[width=0.45\linewidth]{optimization.pdf}\hfill
   \includegraphics[width=0.45\linewidth]{t_optimization.pdf}
-  \caption{Examples of two-lattice matching optimization for 12-flavor systems.  Left: Optimization of the HYP-smearing parameter \al in the RG blocking transformation, for $\be_F = 4.0$.  Right: Optimization of the Wilson flow time $t_f$ with fixed $\al = 0.5$, for $\be_F = 4.5$.  In both cases, the uncertainties on the data points are dominated by averaging over the different observables as described in the text.}
+  \caption{Examples of two-lattice matching optimization for 12-flavor systems.  Left: Optimization of the HYP-smearing parameter \al in the RG blocking transformation, for $\be_F = 5.0$.  Right: Optimization of the Wilson flow time $t_f$ with fixed $\al = 0.5$, for $\be_F = 4.5$.  In both cases, the uncertainties on the data points are dominated by averaging over the different observables as described in the text.}
   \label{fig:opt}
 \end{figure}
 % ------------------------------------------------------------------
@@ -134,22 +134,23 @@ As a result, the bare step-scaling function we obtain is a composite of many dif
 
 % ------------------------------------------------------------------
 \subsection{\label{sec:WMCRG}Wilson-flowed MCRG} % Draft complete
-As an alternative to optimizing the RG blocking transformation, and thus changing the renormalization scheme at each couplings $\be_F$, here we propose to use the Wilson flow to move the lattice system as close as possible to the renormalized trajectory of a fixed renormalization scheme.
+As an alternative to optimizing the RG blocking transformation, and thus changing the renormalization scheme at each coupling $\be_F$, here we propose to use the Wilson flow to move the lattice system as close as possible to the renormalized trajectory of a fixed renormalization scheme.
 
-The Wilson flow is a continuous smearing transformation~\cite{Narayanan:2006rf} that is related to the \MSbar running coupling in perturbation theory~\cite{Luscher:2010iy}.
-Refs.~\cite{Fodor:2012td, Fodor:2012qh} recently used the Wilson flow to compute a step-scaling function in a way similar to Schr\"odinger functional methods.
+The Wilson flow is a continuous smearing transformation~\cite{Narayanan:2006rf} that can be related to the \MSbar running coupling in perturbation theory~\cite{Luscher:2010iy}.
+Refs.~\cite{Fodor:2012td, Fodor:2012qh} recently used the Wilson flow to compute a renormalized step-scaling function in a way similar to Schr\"odinger functional methods.
 While this approach appears very promising, it is based on perturbative relations that are only fully reliable at weak coupling.
 Here we do not use this perturbative connection, instead applying the Wilson flow as a continuous smearing that removes UV fluctuations.
 The Wilson flow moves the system along a surface of constant lattice scale in the infinite-dimensional action-space; it is not a renormalization group transformation and does not change the IR properties of the system.
 
 Our goal is to use a one-parameter Wilson flow transformation to move the lattice system as close as possible to the renormalized trajectory of our fixed RG blocking transformation.
 We proceed by carrying out two-lattice matching after applying the Wilson flow for a flow time $t_f$ on all lattice volumes.
+(The Wilson flow is run only on the unblocked lattices, not in between RG blocking steps.)
 As above, since we can block our lattices only a few times, we must optimize $t_f$ by requiring that consecutive RG blocking steps yield the same $\De\be_F$, as shown in the right panel of \fig{fig:opt}.
 As for traditional MCRG, increasing the number of blocking steps reduces the dependence on the optimization parameter; in the limit $n_b \to \infty$, our results would be independent of $t_f$.
 
 With Wilson-flowed MCRG we can efficiently determine bare step-scaling functions that correspond to unique RG \be functions.
 This new capability opens up interesting directions for future studies.
-By exploring different \be functions around the perturbative gaussian FP, we can study scaling violations in the lattice system.
+By comparing different \be functions around the perturbative gaussian FP, we can study scaling violations in the lattice system.
 In IR-conformal systems, we can investigate the scheme-dependence of the \be function near the IRFP, an issue explored in perturbation theory by \refcite{Ryttov:2012nt}.
 % ------------------------------------------------------------------
 
@@ -162,7 +163,7 @@ Our results for the bare step-scaling function $s_b$ from traditional MCRG two-l
 On the largest $24^3\X48$ lattices that we use in this current study, we work with fermion masses $m = 0.0025$ to stay near the $m = 0$ critical surface.
 Under RG blocking with scale factor $s$, the fermion mass changes as $s^{1 + \ga_m}$ where $\ga_m$ is the mass anomalous dimension.
 Therefore we use $m = 0.01$ on $12^3\X24$ and $m = 0.02$ on $6^3\X12$ lattices.
-We have explicitly checked that these masses are small enough to introduce only negligible finite-mass effects, by generating lattices with $m = 0$ and obtaining indistinguishable results for some points.
+We have explicitly checked that these masses are small enough to introduce only negligible finite-mass effects, by generating lattices with $m = 0$ for some points and obtaining indistinguishable results.
 
 While our 8-flavor results for $s_b$ are significantly different from zero for all couplings we can explore, for $N_f = 12$ we find $s_b \lsim 0$ for $\be_F < 8$, indicating an IRFP.
 Recall that our optimization of the RG blocking transformation means that we use a different renormalization scheme for each coupling $\be_F$, so these bare step scaling functions are composites of several different discrete \be functions.
@@ -170,9 +171,10 @@ For example, with $N_f = 12$ at $5 \leq \be_F \leq 6$, our optimization selects 
 Both our $N_f = 8$ and 12 simulations encounter the \Sb lattice phase at strong coupling, where we cannot perform matching.
 As in Refs.~\cite{Hasenfratz:2011xn, Hasenfratz:2011np}, we do not explore weak enough couplings to recover the two-loop perturbative predictions $s_b \approx 0.6$ (0.3) for $N_f = 8$ (12).
 
-As mentioned above, the error bars shown in \fig{fig:MCRG} are dominated by the spread in predictions for $s_b$ from matching four-, six- and eight-link loops.
+As mentioned above, the error bars shown in \fig{fig:MCRG} are dominated by the spread in results from matching four-, six- and eight-link loops.
 Each of these observables can predict a different optimal $\al$, and for fixed \al each can predict a different $\De\be_F$.
-Preliminary results presented at the conference determined uncertainties from the full spread of optimal \al predicted by the different observables; here, instead, we average over the observables to find the optimal \al and associated uncertainties. % Is ``average over'' clear enough?
+Preliminary results presented at the conference determined uncertainties from the full spread of optimal \al predicted by the different observables.
+Here, instead, we average $\De\be_F$ for the different observables at fixed $\al$, and use these combined data to optimize \al and find the associated uncertainties.
 
 \begin{figure}[htpb]
   \includegraphics[width=0.45\linewidth]{8flavor.pdf}\hfill
@@ -211,8 +213,8 @@ At weaker couplings, we will also attempt to use similar explorations to study s
 % ------------------------------------------------------------------
 \section{Conclusions} % Draft complete
 We have proposed a new, improved MCRG two-lattice matching procedure that uses the Wilson flow to eliminate the need for optimization of the RG blocking transformation.
-Both traditional MCRG and Wilson-flowed MCRG produce bare step scaling functions $s_b$ that indicate an infrared fixed point for SU(3) gauge theory with $N_f = 12$ fundamental fermions, while $s_b$ for $N_f = 8$ is significantly different from zero.
-The results obtained by combining the Wilson flow with two-lattice matching correspond to unique discrete \be functions, unlike $s_b$ from traditional MCRG, which are composite of many different discrete \be functions.
+Both traditional MCRG and Wilson-flowed MCRG produce bare step scaling functions $s_b$ that indicate an infrared fixed point for SU(3) gauge theory with $N_f = 12$ fundamental fermions, while $s_b$ for $N_f = 8$ is significantly different from zero in the accessible range of lattice couplings.
+The results obtained by combining the Wilson flow with two-lattice matching correspond to a unique \be function, unlike $s_b$ from traditional MCRG, which is a composite of many different discrete \be functions.
 % ------------------------------------------------------------------
 
 
